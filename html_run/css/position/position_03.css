@@ -1,0 +1,212 @@
+/* default css code */
+.container {
+  display: flex;
+}
+
+.container>* {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* header css code */
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header h1 {
+  position: fixed;
+  inset: 60px auto auto 60px;
+  z-index: 999;
+}
+
+header img {
+  width: 150px;
+}
+
+header i {
+  position: fixed;
+  inset: 60px 60px auto auto;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f3f3f3;
+  font-size: 25px;
+  z-index: 999;
+}
+
+/* section css code */
+.section01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abs {
+  position: absolute;
+  inset: auto auto 100px 50%;
+  transform: translateX(-50%);
+}
+
+.section02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+.section02 h2 {
+  margin-bottom: 30px;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.section02 p {
+  margin-bottom: 60px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.614;
+}
+
+.section02 .container {
+  margin: 0 auto;
+  width: 1500px;
+  gap: 20px;
+}
+
+.section02 .container img {
+  max-width: 100%;
+}
+
+.section03 .container figure {
+  height: 100vh;
+  filter: grayscale(1) brightness(0.4);
+  /* filter: brightness(0.4); */
+}
+
+.section03 .container .left {
+  background: url('../../assets/image/insta01.jpg') no-repeat center center/cover;
+}
+
+.section03 .container .right {
+  background: url('../../assets/image/insta04.jpg') no-repeat center center/cover;
+}
+
+.section04 .container .left {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 0 100px;
+  color: #fff;
+}
+
+.section04 .container .left h2 {
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section04 .container .left p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+.section05 .container .right {
+  flex: 0 0 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 100px 0 0;
+  height: 100vh;
+  color: #fff;
+  text-align: right;
+  background: url('../../assets/image/us03.jpg') no-repeat center center/cover;
+  /* filter: grayscale(1) brightness(0.4); */
+}
+
+.section05 .container .right h2 {
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section05 .container .right p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+.section06 .container .left {
+  height: 100vh;
+  background: url('../../assets/image/us03.jpg') no-repeat center center/cover;
+}
+
+footer .container .right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-align: right;
+  background: #1b2024;
+}
+
+footer .container .right img {
+  width: 500px;
+}
+
+footer .container .box {
+  margin: 0 0 100px 0;
+}
+
+footer .container .customer {
+  display: flex;
+  gap: 30px;
+  margin: 0 0 100px 0;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+footer .container .sns {
+  margin: 0 0 40px 0;
+  font-size: 19px;
+}
+
+footer address {
+  font-size: 11px;
+  font-style: normal;
+}
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cover.on {
+  height: 100vh;
+}
+
+.cover li {
+  margin: 0 0 10px 0;
+}

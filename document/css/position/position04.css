@@ -1,0 +1,32 @@
+body {
+  background: #333;
+}
+
+.shoes {
+  padding: 100px 0;
+}
+
+.shoes>.case {
+  position: relative;
+  margin: 0 auto;
+  width: 809px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.shoes .case ul {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: 1s;
+  transition-timing-function: cubic-bezier(1,-0.83,.52,.97);
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 30px;
+}
+

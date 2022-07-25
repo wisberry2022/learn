@@ -1,0 +1,60 @@
+body {
+  background: #ff0;
+}
+
+.smile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  background: #f00;
+}
+
+.smile > li {
+  position: absolute;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  width: 50px;
+  height: 50px;
+  background: #f00;
+  transform: rotate(45deg);
+  transition: .5s;
+}
+
+.smile.on >li {
+  transform: rotate(225deg);
+}
+
+.smile > li:nth-child(1) {
+  top: 150px;
+  left: 100px;
+}
+
+.smile > li:nth-child(2) {
+  top: 150px;
+  right: 100px;
+}
+
+.smile > li:nth-child(3) {
+  bottom: 100px;
+  left: 225px;
+}
+
+.top_banner .container {
+  border: 1px solid black;
+  height: 50px;
+  overflow: hidden;
+  /* 토글 진행 시 넘치는 요소들을 가려주어 자연스럽게 움직이게 하기 위해 부여한 속성 */
+  transition: 0.5s;
+}
+
+.top_banner .container.on {
+  border: 1px solid black;
+  height: 0;
+  overflow: hidden;
+}
+
+

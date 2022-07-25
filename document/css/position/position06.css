@@ -1,0 +1,182 @@
+.top_banner {
+  position: relative;
+  background-color: #ff0;
+}
+
+.top_banner button::after {
+  content: 'close';
+}
+
+.top_banner.active button::after {
+  content: 'open';
+}
+
+.top_banner .container {
+  margin: 0 auto;
+  width: 1200px;
+  height: 60px;
+  overflow: hidden;
+  transition: 0.5s;
+  line-height: 1.8;
+}
+
+.top_banner.active .container {
+  height: 0;
+  overflow: hidden;
+}
+
+.top_banner.active i {
+  transform: rotate(180deg);
+}
+
+.top_banner button {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  width: 100px;
+  margin-left: 500px;
+  background-color: #ff0;
+  border: none;
+  outline: none;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+/* header_css_code */
+.header {
+  line-height: 100vh;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.right_banner {
+  position: fixed;
+  /* absolute 좌표설정으로 넘치게 된 요소로 인해 생긴 스크롤바를 없에준다. */
+  top: 50vh;
+  right: -100px;
+  background: #ff0;
+  transition: right .5s;
+}
+
+.right_banner.active {
+  right: 0;
+}
+
+.sun {
+  position: absolute;
+  top: 300px;
+  right: 300px;
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border-radius: 50%;
+  animation: sun_move 2s infinite linear;
+}
+
+.sun li {
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: #f00;
+}
+
+.sun li:nth-child(1) {
+  top: 48px;
+  left: -40px;
+}
+
+.sun li:nth-child(2) {
+  top: 48px;
+  left: 120px;
+}
+
+.sun li:nth-child(3) {
+  top: -20px;
+  left: 38px;
+  transform: rotate(90deg);
+}
+
+.sun li:nth-child(4) {
+  top: 120px;
+  left: 38px;
+  transform: rotate(90deg);
+}
+
+@keyframes sun_move {
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.car {
+  position: fixed;
+  bottom: 50px;
+  right: -300px;
+  border-radius: 50px 10px 0 0;
+  width: 200px;
+  height: 100px;
+  background: #ff0;
+  animation: drive 50s infinite linear;
+}
+
+.car li:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50px 0 0 0;
+  width: 40px;
+  height: 50px;
+  background: #333;
+}
+
+.car li:nth-child(2) {
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 30px;
+  background: #f00;
+  animation: wheel 0.5s infinite linear;
+}
+
+.car li:nth-child(3) {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 30px;
+  background: #f00;
+  animation: wheel 0.5s infinite linear;
+}
+
+@keyframes wheel {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes drive {
+  to {
+    right: 6000px;
+  }
+}
+
+.my_heart {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  color: #f00;
+  font-size: 50px;
+  animation: heart 1.5s infinite;
+}
+
+@keyframes heart {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+ol li {
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+  width: 95%;
+}
+
+strong {
+  display: block;
+  margin-top: 10px;
+  color: #f00;
+}
+
+a {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+a:visited {
+  color: #00f;
+}
+
+.box04_list li {
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+
+.temp {
+  margin-top: 16px;
+}
+
+

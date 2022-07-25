@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>INDEX</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Green Computer Academy</h1>
+    </header>
+    <nav>
+      <div class = "nav_title_box">
+        <h2>DK Steel</h2>
+        <button type = "button" class = "ds_under_show">
+          <i class="xi-caret-down"></i>
+        </button>
+      </div>
+      <div class = "ds_under_bar">
+        <ol class = "ds_nav_box">
+          <li class="nav_list">
+            <a href = "./dk_steel.html">DK_Steel_(01)</a>
+            <em>2022.05.23</em>
+            <p>실제 DK_Steel 사이트의 화면 일부를 구현해보았다.</p>
+            <strong>line-height와 margin과의 복잡한 관계에 대해 새롭게 알게되었다.</strong>
+          </li>
+          <li class="nav_list">
+            <a href = "./dk_steel_2.html">DK_Steel_(02)</a>
+            <em>2022.05.24</em>
+            <p>실제 DK_Steel 사이트의 화면 일부를 구현해보았다.</p>
+            <strong>상단 메뉴 화면과 슬라이드 화면을 구성해보았다. line-height에 대해 정확하게 공부해야 겠다고 느꼈다.</strong>
+          </li>
+          <li class="nav_list">
+            <a href = "./dk_steel_3.html">DK_Steel_(03)</a>
+            <em>2022.05.25</em>
+            <p>실제 DK_Steel 사이트의 화면 일부를 구현해보았다.</p>
+            <strong>background에 대해 자세히 배웠다. background shorthand에 대해 알게 되었고, background-position과 background-size의 개념을 어느 정도 잡을 수 있었다. </strong>
+          </li>
+          <li class="nav_list">
+            <a href = "./dk_steel_4.html">DK_Steel_(04)</a>
+            <em>2022.05.27</em>
+            <p>실제 DK_Steel 사이트의 화면 일부를 구현해보았다.</p>
+            <strong>남은 화면을 모두 구현하였다. 여태껏 배웠던 가로정렬,position, background 등을 활용하여 하나의 완성된 페이지를 구현하였다. 비록 선생님의 코드를 따라치긴 했지만 나중에는 스스로 만들 수 있을 정도가 될 때까지 열심히 공부해야겠다.</strong>
+          </li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <script>
+    document.querySelector('.ds_under_show').addEventListener('click',function() {
+      document.querySelector('.ds_under_bar').classList.toggle('on');
+      document.querySelector('.ds_nav_box').classList.toggle('on');
+    })
+  </script>
+</body>
+</html>

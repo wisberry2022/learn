@@ -1,0 +1,191 @@
+#header {
+  border-bottom: 1px solid #000;
+  line-height: 100px;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+#header .gnb>ul {
+  display: flex;
+}
+
+#header .gnb>ul a {
+  display: block;
+  padding: 0 20px;
+}
+
+#main {
+  position: relative;
+}
+
+.main_visual {
+  position: relative;
+  border: 1px solid black;
+}
+
+.main_slider figure {
+  position: relative;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.main_slider .item01 {
+  background-image: url('../../assets/image/hover/mainvisual01.jpg');
+}
+
+.main_slider .item02 {
+  background-image: url('../../assets/image/hover/mainvisual02.jpg');
+}
+
+.main_slider .item03 {
+  background-image: url('../../assets/image/hover/mainvisual03.jpg');
+}
+
+.main_slider .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.main_slider figure .inner h2 {
+  margin: 0 0 10px 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.main_slider figure.on .inner h2 {
+  color: #f00;
+  transform: translateY(0);
+  /* translate로 변경된 값 원위치로 옮기기 */
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.main_slider figure .inner p {
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  font-weight: 300;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.main_slider figure.on .inner p {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.7s 1s;
+}
+
+.main_slider figure .inner a {
+  display: inline-block;
+  transform: translateY(100px);
+  padding: 5px 15px;
+  background: #333;
+  opacity: 0;
+}
+
+.main_slider figure.on .inner a {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.7s 2s;
+}
+
+.main_visual .num {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-100%);
+  margin: 0 0 0 600px;
+  width: 100px;
+  height: 100px;
+  background-image: url('../../assets/image/slick/slick_test.png');
+  background-position-y: 0;
+  transition: 0.3s;
+}
+
+.main_visual .custom_dots {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  background: #ddd;
+}
+
+.main_visual .custom_dots li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+
+}
+
+.main_visual .custom_dots li~li {
+  border-left: 1px solid #fff;
+}
+
+.main_visual .custom_dots li a {
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+
+.main_visual .custom_dots li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f00;
+}
+
+.main_visual .custom_dots li.on::before {
+  width: 100%;
+  transition: 1.5s;
+}
+
+.main_visual i {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.custom_arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid black; */
+  width: 1400px;
+  color: #fff;
+}
+
+.custom_arrows>i {
+  font-size: 50px;
+}
+
+.custom_play {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  /* top: 80%; */
+  left: 50%;
+  transform: translate(-50%, -350%);
+  /* border: 1px solid black; */
+  background-color: #ddd;
+}

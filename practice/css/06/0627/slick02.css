@@ -1,0 +1,26 @@
+.main_visual {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.container {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 1200px;
+}
+
+.main_slider figure {
+  margin: 0 10px;
+  height: 250px;
+}
+
+.main_slider figure.slick-center img {
+  height: 350px;
+}
+
+.main_visual2 {
+  height: 100vh;
+}

@@ -1,0 +1,19 @@
+body {
+  height: 1000vh;
+}
+
+.container {
+  border: 1px solid black;
+  height: 5500px;
+}
+
+.box {
+  position: sticky;
+  top: 1100px;
+  left: 340px;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}

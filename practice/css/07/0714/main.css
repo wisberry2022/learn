@@ -1,0 +1,137 @@
+header {
+  background-color: #fff;
+}
+
+header .gnb .main_menu {
+  display: flex;
+  justify-content: center;
+}
+
+header .main_menu li a {
+  display: block;
+  padding: 30px;
+}
+
+.first {
+  /* padding: 100px 0; */
+  height: 100vh;
+  background-color: #00f;
+  color: #fff;
+  text-align: center;
+}
+
+.first .box {
+  outline: 1px solid #fff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+.section01 {
+  margin-bottom: 400px;
+  padding: 100px 0;
+  height: 100vh;
+  background: #ddd;
+}
+
+.section01 .container {
+  outline: 1px solid #000;
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.section01 .container .left {
+  outline: 1px solid #000;
+  flex: 1;
+}
+
+.section01 .container .right {
+  outline: 1px solid #000;
+  flex: 1;
+  height: 550px;
+  background: url('../../../assets/image/freedom_child.jpg') no-repeat center center/cover;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+}
+
+.a_section {
+  padding: 100px 0;
+  height: 100vh;
+  /* background-color: #0e0; */
+}
+
+.a_section.sticky {
+  top: 150px;
+}
+
+.a_section .container {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.a_section .container .left {
+  flex: 1;
+}
+
+.a_section .container .right {
+  flex: 1;
+}
+
+.b_section {
+  padding: 100px 0;
+}
+
+.section02 {
+  position: relative;
+  /* top: 150px; */
+  padding: 100px 0;
+  height: 100vh;
+  background-color: #f00;
+}
+
+.section02 .container {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+
+.section02 .container .left {
+  flex: 1;
+}
+
+.section02 .container .right {
+  flex: 1;
+}
+
+.g_section {
+  position: relative;
+  height: 100vh;
+  background-color: #f0f;
+}
+
+.section03 {
+  position: relative;
+  padding: 100px 0;
+  background-color: #00f;
+}
+
+.section04 {
+  position: relative;
+  padding: 100px 0;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  background-color: #fff;
+  /* z-index: 999; */
+}

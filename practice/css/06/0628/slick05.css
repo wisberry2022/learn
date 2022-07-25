@@ -1,0 +1,77 @@
+.main_visual {
+  border: 1px solid #000;
+  height: 600px;
+}
+
+.main_visual .container {
+  display: flex;
+  margin: 30px 0 0 auto;
+  border: 1px solid #000;
+  width: 1200px;
+}
+
+.main_visual .left {
+  width: 30%;
+}
+
+.main_visual .right {
+  width: 70%;
+}
+
+.main_slider01 .common_set {
+  margin-left: 35px;
+  width: 150px;
+  height: 530px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main_slider01 .item01 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona01.jpg');
+}
+
+.main_slider01 .item02 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona02.jpg');
+}
+
+.main_slider01 .item03 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona03.jpg');
+}
+
+.main_slider01 .item04 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona04.jpg');
+}
+
+.main_slider01 .item05 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona05.jpg');
+}
+
+.main_slider02 .common_set {
+  margin-left: 35px;
+  width: 150px;
+  height: 530px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main_slider02 .item01 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona01.jpg');
+}
+
+.main_slider02 .item02 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona02.jpg');
+}
+
+.main_slider02 .item03 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona03.jpg');
+}
+
+.main_slider02 .item04 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona04.jpg');
+}
+
+.main_slider02 .item05 {
+  background-image: url('../../../assets/image/06/0627/lesedilarona05.jpg');
+}

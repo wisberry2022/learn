@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/video/jquery.mb.YTPlayer.min.css">
+  <link rel="stylesheet" href="../../css/video/video_01.css">
+  <title>Video01_동영상 넣기</title>
+</head>
+
+<body>
+  <section class="fixed_bg">
+    <h2>배경화면 고정하기 : parallax</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, necessitatibus assumenda repellat inventore
+      maxime harum?
+    </p>
+  </section>
+
+  <section class="movie01">
+    <div class="container">
+      <div class="left">
+        <video src="../../assets/video/section_01.mp4" autoplay muted playsinline class="vd01"></video>
+      </div>
+      <div class="right">
+        <div class="inner">
+          <h2>mp4 동영상 플레이</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="controls">
+            <i class="xi-pause"></i>
+            <i class="xi-play"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="movie02">
+    <!-- <div class="inner">
+      <h2>BUSTED</h2>
+      <p>
+        Meet You There(Abbey Road Session)
+      </p>
+      <div class="controls">
+        <i class="xi-pause"></i>
+        <i class="xi-play"></i>
+        <i class="xi-bars"></i>
+      </div> -->
+    </div>
+    <div id="bgndVideo" class="player"></div>
+  </section>
+
+  <script src="../../js/jquery-1.12.4.min.js"></script>
+  <script src="../../js/ytPlayer/jquery.mb.YTPlayer.min.js"></script>
+  <script>
+    $(function () {
+      $('.movie01 .controls i:nth-child(1)').on('click', function () {
+        $('.vd01').trigger('pause');
+      })
+
+      $('.movie01 .controls i:nth-child(2)').on('click', function () {
+        $('.vd01').trigger('play');
+      })
+      
+      $("#bgndVideo").YTPlayer({
+        videoURL: 'https://youtu.be/LjRWdVdO50Y',
+        containment: '.movie02',
+        autoPlay: true,
+        showControls: false,
+        playOnlyIfVisible: true,
+        quality: 'highres',
+        ratio: '4/3',
+      });
+
+      $('.movie02 .controls i:nth-child(1)').on('click', function () {
+        $('#bgndVideo').YTPPause();
+      });
+
+      $('.movie02 .controls i:nth-child(2)').on('click', function () {
+        $('#bgndVideo').YTPPlay();
+      });
+
+      $('.movie02 .controls i:nth-child(3)').on('click', function () {
+        $('#bgndVideo').YTPMute();
+      });
+      // youtube player
+    }); // the end
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 박스 - Box-Model / 기본 박스 01</title>
+  <!-- 외부 스타일(External Stylesheet): 모듈화를 위해 사용 -->
+  <link rel="stylesheet" href="">
+  <!-- 내부 스타일(Internal Stylesheet) -->
+  <style>
+    /* 선택자(Selector) */
+    div {
+      /* 
+        margin, padding, inset shorthand 방향
+        4개: 상 우 하 좌 
+        3개: 상 좌우 하
+        2개: 상하 좌우
+      */
+      margin: 50px 0;
+      /* 
+        box 사이 margin은 겹침 현상이 생긴다. 
+        부모 block과 첫번째 자식 block 사이에도 margin 겹침 현상이 발생한다.
+      */
+      width: 1200px;
+      background: rgb(0, 0, 0, 0.3);
+    }
+
+    div:nth-child(1) {
+      /* block의 안 쪽으로 padding과 border를 가둔다.(레이아웃 조정이 용이해진다.) */
+      box-sizing: border-box;
+      padding: 0 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- inline Stylesheet <div style="border: 1px solid black;">-->
+  <div>BOX_01</div>
+  <div>BOX_02</div>
+  <div>BOX_03</div>
+
+  <h2>BOX의 기본 성질 (display: block;)</h2>
+  <ul>
+    <li>투명하다.</li>
+    <li>width: auto / height: auto</li>
+    <li>Y축으로 쌓인다.</li>
+    <li>자신의 요소 옆에 다른 요소가 오지 못한다.</li>
+  </ul>
+
+  <ol>
+    <li>태그는 크게 inline / block 속성으로 나뉜다.</li>
+    글자 그림 등 내용에 관여하는 태그: <span>span</span>, <strong>strong</strong>, <em>em</em>, <i>icon</i>, <button>button</button>,
+    <input /> <br />
+    인라인 속성을 가지고 나머지 태그들은 Block 속성을 가진다.
+    </li>
+    <li>Block 속성은 width height margin padding 값을 가지고 inline 속성은 margin,padding의 left/right값만을 가진다.</li>
+    <li>inline 속성은, padding의 top/bottom을 설정하면 background를 포함하여 padding이 적용된 것처럼 보인다.</li>
+  </ol>
+
+  <p>
+    CSS는 레이아웃을 만들어준다. <br />
+    Inline Stlye이 외부/내부 스타일보다 우선적으로 적용된다. (계급이 높다)
+    javascript의 적용범위는 인라인 스타일(Inline-Style)이므로 외부/내부 스타일보다 우선적으로 적용된다.
+    style name role : Attribute, Property / Props(in REACT)
+  </p>
+</body>
+
+</html>

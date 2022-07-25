@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/basic/basic_01.css">
+  <title>Semantic Tag - Header03</title>
+  <style>
+    .header {
+      background: #f7f7f7;
+      line-height: 100px;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    .header h1 {
+      width: 200px;
+    }
+
+    .header .btn {
+      width: 200px;
+      text-align: right;
+    }
+
+    .header .btn i {
+      transform: translateY(5px);
+      border-radius: 3px;
+      padding: 5px;
+      font-size: 23px;
+      background: #ddd;
+      cursor: pointer;
+    }
+
+    .header nav>ul {
+      display: flex;
+      gap: 40px;
+    }
+
+    .header nav>ul a {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Wrap">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="/">
+            <img src="./assets/image/grafflogo.png" alt="">
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu02</a></li>
+            <li><a href="">menu03</a></li>
+            <li><a href="">menu04</a></li>
+            <li><a href="">menu05</a></li>
+          </ul>
+        </nav>
+        <div class="btn">
+          <i class="xi-bars"></i>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main_visual">
+      </div>
+    </main>
+    <footer class="footer">
+      &copy; basic template.
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+main {
+  border: 1px solid black;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 350px;
+  background: #f00;
+  border: 1px solid black;
+  transform: translate(-50%, -50%);
+  /* 자기 자신 사이즈의 50% */
+}
+
+.popup button {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  padding: 10px 5px;
+}

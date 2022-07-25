@@ -1,0 +1,114 @@
+.main_slider {
+  position: relative;
+}
+
+.main_visual .slick-dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  width: 10%;
+  height: 100%;
+}
+
+.main_visual .slick-dots li {
+  position: absolute;
+  left: -13%;
+  margin-bottom: 100px;
+  border-radius: 50px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: #000;
+  transition: 0.5s;
+}
+
+.main_visual .slick-dots li:first-child {
+  top: 25%;
+}
+
+.main_visual .slick-dots li:first-child::after {
+  content: 'STEP1';
+  position: absolute;
+  top: 38%;
+  left: 8%;
+}
+
+.main_visual .slick-dots li:nth-child(2) {
+  top: 45%;
+}
+
+.main_visual .slick-dots li:nth-child(2)::after {
+  content: 'STEP2';
+  position: absolute;
+  top: 38%;
+  left: 8%;
+}
+
+.main_visual .slick-dots li:last-child {
+  top: 65%;
+}
+
+.main_visual .slick-dots li:last-child::after {
+  content: 'STEP3';
+  position: absolute;
+  top: 38%;
+  left: 8%;
+}
+
+.main_visual .slick-dots .slick-active {
+  background: #fff;
+}
+
+.main_visual .slick-dots li button {
+  opacity: 0;
+}
+
+/* sticky section css code */
+.sticky {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+
+.sticky .left {
+  position: sticky;
+  top: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.sticky .left h2 {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.sticky .left strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sticky .left a {
+  display: block;
+  padding: 5px 25px;
+  background: #000;
+  color: #fff;
+}
+
+.sticky .right {
+  position: sticky;
+  inset: 0 0 auto auto;
+}
+
+/* future css code */
+.future {
+  height: 100vh;
+}

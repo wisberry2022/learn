@@ -1,0 +1,83 @@
+h1 {
+  line-height: 100px;
+  background: #f00;
+  color: #fff;
+}
+
+nav {
+  line-height: 100px;
+  background: #00f;
+  color: #fff;
+}
+
+header {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.right {
+  line-height: 100px;
+  background: #ff0;
+}
+
+.header01 {
+  display: flex;
+}
+
+.header02 {
+  display: flex;
+  justify-content: center;
+}
+
+.header03 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header04 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header05 {
+  display: flex;
+}
+
+.header05 nav {
+  margin: 0 0 0 auto;
+}
+
+.basic {
+  line-height: 100px;
+}
+
+.basic .container {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.basic nav {
+  margin: 0 0 0 auto;
+}
+
+.basic nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.basic nav ul li {
+  padding: 0 10px;
+}
+
+.basic .icon {
+  margin: 0 0 0 4px;
+}
+
+

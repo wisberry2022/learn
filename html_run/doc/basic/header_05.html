@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/basic/basic_01.css">
+  <title>Semantic Tag - Header05</title>
+  <style>
+    .header {
+      background: #f7f7f7;
+      line-height: 100px;
+    }
+
+    .header .container {
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    .header nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header nav>* {
+      flex: 1;
+    }
+
+    .header nav h1 {
+      text-align: center;
+    }
+
+    .header .btn i {
+      transform: translateY(5px);
+      border-radius: 3px;
+      padding: 5px;
+      font-size: 23px;
+      background: #ddd;
+      cursor: pointer;
+    }
+
+    .header nav>ul {
+      display: flex;
+      gap: 40px;
+    }
+
+    .header nav .service {
+      justify-content: flex-end;
+      /* border: 1px solid black; */
+    }
+
+    .header nav>ul a {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Wrap">
+    <header class="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu02</a></li>
+          </ul>
+          <h1 class="logo">
+            <a href="/">
+              <img src="./assets/image/grafflogo.png" alt="">
+            </a>
+          </h1>
+          <ul class="service">
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu02</a></li>
+            <li><a href="">menu01</a></li>
+          </ul>
+        </nav>
+        <!-- <div class="btn">
+          <i class="xi-bars"></i>
+        </div> -->
+      </div>
+    </header>
+    <main>
+      <div class="main_visual">
+      </div>
+    </main>
+    <footer class="footer">
+      &copy; basic template.
+    </footer>
+  </div>
+</body>
+
+</html>

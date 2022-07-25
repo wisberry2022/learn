@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/basic/basic_01.css">
+  <title>header 구성하기 ㅡ multi_menu01</title>
+  <style>
+    .header {
+      line-height: 100px;
+    }
+
+    .header .container {
+      display: flex;
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    .header .gnb {
+      margin: 0 0 0 auto;
+    }
+
+    .gnb>ul {
+      display: flex;
+      /* gap: 50px; */
+    }
+
+    .gnb>ul>li {
+      position: relative;
+      /* top/left에 좌표를 줬기 때문에 border를 넘어가지 않았다. */
+      /* border: 5px solid #000; */
+    }
+
+    .gnb>ul>li a {
+      display: block;
+      padding: 0 25px;
+    }
+
+    .gnb>ul .smenu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      z-index: 999;
+      width: 150px;
+      line-height: 40px;
+      transform: translateX(-50%);
+      text-align: center;
+      background: #ff0;
+    }
+
+    .gnb>ul>li:hover ul {
+      display: block;
+    }
+
+    .mbtn {
+      display: none;
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      padding: 5px;
+      font-size: 30px;
+      background: #f7f7f7;
+      line-height: 1;
+    }
+
+    @media (max-width:768px) {
+      .header {
+        line-height: 100px;
+      }
+
+      .header .container {
+        display: flex;
+        margin: 0 auto;
+        width: auto;
+      }
+
+      .header .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 999;
+        width: calc(100% - 90px);
+        height: 100vh;
+        background: #fff;
+        margin: 0 0 0 auto;
+        transition: 0.5s;
+      }
+
+      .header .gnb.on {
+        left: 0;
+      }
+
+      .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        line-height: 40px;
+        /* gap: 50px; */
+      }
+
+      .gnb>ul>li {
+        position: relative;
+        /* top/left에 좌표를 줬기 때문에 border를 넘어가지 않았다. */
+        /* border: 5px solid #000; */
+      }
+
+      .gnb>ul>li a {
+        display: block;
+        padding: 0 25px;
+      }
+
+      .gnb>ul .smenu {
+        display: none;
+        position: static;
+        left: 50%;
+        top: 100px;
+        z-index: 999;
+        width: auto;
+        line-height: 40px;
+        transform: translateX(0);
+        text-align: center;
+        background: #ff0;
+      }
+
+      .gnb>ul>li:hover ul {
+        display: none;
+      }
+
+      .mbtn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Wrap">
+    <header class="header">
+      <div class="container">
+        <h1>
+          <a href="/">
+            <img src="../assets/image/grafflogo.png" alt="">
+          </a>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li>
+              <a href="">MENU01</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">MENU02</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">MENU03</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">MENU04</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">MENU05</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">MENU06</a>
+              <ul class="smenu">
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="mbtn">
+          <i class="xi-bars"></i>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main_visual">
+
+      </div>
+    </main>
+    <footer>
+      &copy; basic template. <a href="#!">link</a>
+    </footer>
+  </div>
+  <script src="../../../js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(function () {
+      $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+          e.preventDefault();
+          $(this).next().stop().slideToggle();
+          // $(this).parent().siblings().children('ul').slideUp();
+        }
+      });
+
+      $(window).on('resize', function () {
+        $('.gnb').removeClass('on');
+        $('.gnb>ul ul').removeAttr('style');
+      });
+
+      $('.mbtn').on('click', function () {
+        $('.gnb').toggleClass('on');
+        $('.gnb>ul>li>a').next().stop().slideUp();
+      });
+
+    })
+  </script>
+</body>
+
+</html>

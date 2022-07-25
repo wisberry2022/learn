@@ -1,0 +1,74 @@
+@import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+body {
+  background-color: #F5F5F5;
+}
+
+/* header css code */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  height: 150px;
+  text-align: left;
+  color: #00FFFF;
+  background-color: #3CB371;
+}
+
+.header_title {
+  margin-top: 45px;
+  font-size: 36px;  
+  font-weight: 700;  
+}
+
+/* nav css code */
+nav {
+  margin: 35px 0 0 50px;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+.nav_title_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 20px 0;
+  border-bottom: 2px solid #ff0;
+  padding: 10px 0;
+  /* border: 1px solid black; */
+}
+
+.nav_title {
+  padding-left: 20px;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  /* border: 1px solid black; */
+}
+
+.nav_list {
+  padding-bottom: 16px;
+  line-height: 1.5;
+}
+
+.link_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f0;
+}
+
+.sub_ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+
+
+
+

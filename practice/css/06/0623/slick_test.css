@@ -1,0 +1,95 @@
+.main_visual {
+  border: 1px solid #000;
+  position: relative;
+  padding: 100px 0;
+  height: 70vh;
+  background-color: #f9f9f9;
+}
+
+.main_slider {
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 350px;
+  height: 450px;
+}
+
+.common {
+  position: position;
+  bottom: 0;
+  margin: 0 10px;
+  width: 350px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.slick-slide {
+  height: 250px;
+  transform: translateY(80%);
+  /* transition: 0.5s; */
+}
+
+.slick-slide.slick-center {
+  height: 450px;
+  transform: translateY(0);
+}
+
+.main_visual .slick-dots {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.main_visual .slick-dots li {
+  display: inline-block;
+}
+
+.main_visual .slick-dots li button {
+  font-size: 0;
+  margin: 0 5px;
+  border-radius: 100%;
+  border: none;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.main_visual .slick-dots .slick-active button {
+  background: #000;
+}
+
+
+.item01 {
+  background-image: url('../../../assets/image/a_present_for_everyone.jpg');
+}
+
+.item02 {
+  background-image: url('../../../assets/image/freedom_child.jpg');
+}
+
+.item03 {
+  background-image: url('../../../assets/image/screen_violence.jpg');
+}
+
+.arrow_set i {
+  position: absolute;
+}
+
+.arrow_set i:first-child {
+  right: 50%;
+  bottom: 37%;
+  transform: translateX(-370%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.arrow_set i:last-child {
+  right: 50%;
+  bottom: 37%;
+  transform: translateX(470%);
+  font-size: 25px;
+  cursor: pointer;
+}

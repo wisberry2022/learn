@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+  <style>
+    /* 간단한 reset css code */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #header {
+      position: relative;
+      line-height: 100px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    nav>ul {
+      display: flex;
+      gap: 120px;
+      text-align: center;
+    }
+
+    nav>ul>li {
+      position: relative;
+    }
+
+    nav ul ul {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 150px;
+      background: #ff0;
+      line-height: 40px;
+      z-index: 999;
+      transform: translateX(-30%);
+    }
+
+    nav>ul>li ul {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 150px;
+      height: 0px;
+      background: #ff0;
+      z-index: 999;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    nav>ul:hover>li ul {
+      height: 210px;
+    }
+
+    nav>ul::before {
+      content: "";
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #ff0;
+      z-index: 999;
+      transition: 0.5s;
+    }
+
+    nav>ul:hover::before {
+      height: 210px;
+    }
+
+    nav a {
+      display: block;
+    }
+
+    .main_visual {
+      position: relative;
+      height: 500px;
+      background: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header id="header">
+      <div class="container">
+        <h1>LOGO</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="">menu01</a>
+              <ul>
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+                <li><a href="">smenu05</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">menu02</a>
+              <ul>
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+                <li><a href="">smenu05</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">menu03</a>
+              <ul>
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+                <li><a href="">smenu05</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">menu04</a>
+              <ul>
+                <li><a href="">smenu01</a></li>
+                <li><a href="">smenu02</a></li>
+                <li><a href="">smenu03</a></li>
+                <li><a href="">smenu04</a></li>
+                <li><a href="">smenu05</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="main_visual">
+        <!--  뒤에 지정한 position값이 이전에 설정한 position을 덮어쓰게 되었다.  -->
+        main
+      </div>
+    </main>
+    <footer id="footer">
+      &copy; lee
+    </footer>
+  </div>
+</body>
+
+</html>

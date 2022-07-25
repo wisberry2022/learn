@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/fullpage/fullpage.min.css">
+  <link rel="stylesheet" href="../../css/fullpage/fullpage_01.css">
+  <title>Full Page_01</title>
+</head>
+
+<body>
+  <header id="header">
+    <h1>
+      <a href="/">
+        2030 King's PortFolio
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#p01">portfolio01</a></li>
+        <li><a href="#p02">portfolio02</a></li>
+        <li><a href="#p03">portfolio03</a></li>
+        <li><a href="#p04">portfolio04</a></li>
+        <li><a href="#p05">portfolio05</a></li>
+      </ul>
+    </nav>
+    <div class="cover_toggle">
+      <!-- <i class="xi-bars"></i> -->
+    </div>
+  </header>
+
+  <main id="portfolio">
+    <section class="section portfolio01">
+      <div class="inner">
+        <h2>01, Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure.</p>
+      </div>
+    </section>
+    <section class="section portfolio02">
+      <div class="inner">
+        <h2>02, Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure.</p>
+      </div>
+    </section>
+    <section class="section portfolio03">
+      <div class="inner">
+        <h2>03, Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure.</p>
+      </div>
+    </section>
+    <section class="section portfolio04">
+      <div class="inner">
+        <h2>04, Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure.</p>
+      </div>
+    </section>
+    <section class="section portfolio05">
+      <div class="inner">
+        <h2>05, Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="cover">
+    <ul>
+      <li><a href="#p01">portfolio01</a></li>
+      <li><a href="#p02">portfolio02</a></li>
+      <li><a href="#p03">portfolio03</a></li>
+      <li><a href="#p04">portfolio04</a></li>
+      <li><a href="#p05">portfolio05</a></li>
+    </ul>
+  </div>
+
+  <footer id="footer">
+    <div class="toTop">
+      <a href="#p01">
+        <i class="xi-arrow-top"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="../../js/jquery-1.12.4.min.js"></script>
+  <script src="../../js/fullPage/fullpage.min.js"></script>
+  <script>
+    $(function () {
+      $('#portfolio').fullpage({
+        anchors: ['p01', 'p02', 'p03', 'p04', 'p05'],
+        afterLoad: function (origin, destination, direction, trigger) {
+          $('.section').eq(destination.index).addClass('on').siblings().removeClass('on');
+          $('nav li').eq(destination.index).addClass('on').siblings().removeClass('on');
+        },
+      });
+
+      $('.cover_toggle').on('click', function () {
+        $('#cover').toggleClass('on');
+        $(this).toggleClass('on');
+      });
+
+      $('#cover a').on('click', function () {
+        $('#cover').removeClass('on');
+        $('.cover_toggle').toggleClass('on');
+      });
+    })
+  </script>
+</body>
+
+</html>

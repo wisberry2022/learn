@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/common.css">
+  <title>가상 요소 선택자_01</title>
+  <style>
+    section {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    section h2 {
+      margin: 0 0 10px 0;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    section p {
+      margin: 0 0 30px 0;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: -0.025em;
+    }
+
+    section .container {
+      display: flex;
+      gap: 30px;
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    section .container figure {
+      flex: 1;
+    }
+
+    section .container figure img {
+      max-width: 100%;
+    }
+
+    .psd_01 h2::before {
+      content: '앞';
+    }
+
+    .psd_01 h2::after {
+      content: '뒤';
+    }
+
+    .psd_02 h2::after {
+      content: '';
+      display: block;
+      margin: 20px auto;
+      width: 80px;
+      height: 1px;
+      background: #f00;
+    }
+
+    .psd_03 h2::before {
+      content: '';
+      display: inline-block;
+      margin: -5px 10px 0 0;
+      width: 80px;
+      height: 1px;
+      background: #f00;
+      vertical-align: middle;
+    }
+
+    .psd_03 h2::after {
+      content: '';
+      display: inline-block;
+      margin: -5px 0 0 10px;
+      width: 80px;
+      height: 1px;
+      background: #f00;
+      vertical-align: middle;
+    }
+
+    .psd_04 h2::after {
+      content: "\e907";
+      font-family: xeicon !important;
+    }
+
+    .psd_04 figure::after {
+      content: "\ea12";
+      font-family: xeicon !important;
+    }
+
+    .dot_list {
+      width: 300px;
+    }
+
+    .dot_list>li {
+      position: relative;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      padding: 0 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .dot_list>li::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background: #f00;
+    }
+
+    .psd_05 figure {
+      position: relative;
+    }
+
+    .psd_05 figure::after {
+      content: attr(data-num);
+      /* 내가 만든 attribute를 content로 사용할 수 있게 해준다. */
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      border-radius: 50%;
+      padding: 30px;
+      font-size: 30px;
+      color: #fff;
+      background: #f00;
+    }
+
+    .psd_05 h2::after {
+      content: "";
+      display: block;
+      margin: 20px auto;
+      border-radius: 50% 0;
+      width: 30px;
+      height: 30px;
+      background: #369;
+      transform: rotate(15deg);
+    }
+
+    hr.list_hr {
+      position: relative;
+      margin: 50px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+      overflow: visible;
+    }
+
+    hr.list_hr::after {
+      content: '\e907';
+      font-family: xeicon !important;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      border-radius: 50%;
+      padding: 20px;
+      font-size: 20px;
+      transform: translateX(-50%) rotate(90deg);
+      background: #f7f7f7;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="psd_01">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <div class="container">
+      <figure>
+        <img src="../../assets/image/insta01.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta02.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta03.jpg" alt="">
+      </figure>
+    </div>
+  </section>
+
+  <section class="psd_02">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <div class="container">
+      <figure>
+        <img src="../../assets/image/insta01.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta02.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta03.jpg" alt="">
+      </figure>
+    </div>
+  </section>
+
+  <section class="psd_03">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <div class="container">
+      <figure>
+        <img src="../../assets/image/insta01.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta02.jpg" alt="">
+      </figure>
+      <figure>
+        <img src="../../assets/image/insta03.jpg" alt="">
+      </figure>
+    </div>
+  </section>
+
+  <section class="psd_04">
+    <h2>
+      <i class="xi-arrow-right"></i>
+      Lorem ipsum dolor sit.
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <div class="container">
+      <ul class="dot_list">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus
+          quosven iamdol ormque est illo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="psd_05">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <div class="container">
+      <figure data-num="01">
+        <img src="../../assets/image/insta01.jpg" alt="">
+      </figure>
+      <figure data-num="02">
+        <img src="../../assets/image/insta02.jpg" alt="">
+      </figure>
+      <figure data-num="03">
+        <img src="../../assets/image/insta03.jpg" alt="">
+      </figure>
+    </div>
+  </section>
+
+  <section class="psd_06">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat, repellat eaque quidem natus quosven
+      iamdol oremque est illo.
+    </p>
+    <hr class="list_hr" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, neque iure at dignissimos fugiat voluptas minus
+    </p>
+    <div class="container">
+      <figure data-num="01">
+        <img src="../../assets/image/insta01.jpg" alt="">
+      </figure>
+      <figure data-num="02">
+        <img src="../../assets/image/insta02.jpg" alt="">
+      </figure>
+      <figure data-num="03">
+        <img src="../../assets/image/insta03.jpg" alt="">
+      </figure>
+    </div>
+  </section>
+</body>
+
+</html>

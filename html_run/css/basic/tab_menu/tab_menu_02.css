@@ -1,0 +1,54 @@
+.tab {
+  padding: 100px 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.tab_menu {
+  display: flex;
+}
+
+.tab_menu>li {
+  flex: 1;
+}
+
+.tab_menu>li>a {
+  display: block;
+  padding: 0 15px;
+  line-height: 40px;
+  background: #f7f7f7;
+}
+
+.tab_menu>li.on a {
+  background: #333;
+  color: #fff;
+}
+
+.tab_menu>li~li {
+  border-left: 1px solid #fff;
+}
+
+.tab_content {
+  position: relative;
+  height: 25vh;
+}
+
+.tab_content>li {
+  position: absolute;
+  inset: 0 auto auto 0;
+  visibility: hidden;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.tab_content>li.on {
+  visibility: visible;
+}
+
+.bbong {
+  padding: 200px 0;
+  background: #333;
+}

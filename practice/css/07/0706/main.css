@@ -1,0 +1,94 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#header {
+  padding: 30px 0;
+  background-color: #f9f9f9;
+}
+
+#header .container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+#header .container .header_menu {
+  width: 60%;
+}
+
+#header .container .header_menu .first_menu li {
+  float: left;
+}
+
+#header .container .header_menu .first_menu li a {
+  display: block;
+  padding: 15px;
+}
+
+#header .container .second_menu {
+  width: 40%;
+  float: right;
+}
+
+#header .container .header_second_menu {
+  float: right;
+}
+
+#header .container .header_second_menu li {
+  float: left;
+}
+
+#header .container .header_second_menu li a {
+  display: block;
+  padding: 15px;
+}
+
+.pd_intro {
+  padding: 100px 0;
+}
+
+.pd_intro .container {
+  /* outline: 1px solid #000; */
+  margin: 0 auto;
+  width: 1200px;
+  text-align: center;
+}
+
+.pd_intro .container h2 {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.pd_intro .container p {
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.pd_intro .container .pd_set {
+  outline: 1px solid #000;
+  text-align: center;
+}
+
+.pd_intro .container .pd_set::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.pd_intro .container .pd_set figure {
+  /* outline: 1px solid #000; */
+  display: inline-block;
+  padding: 0 15px;
+  width: 30%;
+  height: 350px;
+}
+
+.pd_intro .container .pd_set figure img {
+  height: 100%;
+}
+
+

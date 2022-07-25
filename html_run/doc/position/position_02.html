@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 박스 : Box-Model / Position 02</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      line-height: 100vh;
+    }
+
+    header {
+      background: #f00;
+    }
+
+    main {
+      background: #ff0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .container figure {
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .container figure:nth-child(2) {
+      background: #333;
+      height: 100vh;
+    }
+
+    footer {
+      background: #00f;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="sticky">
+    header
+  </header>
+  <main class="sticky">
+    main
+  </main>
+  <section class="sticky">
+    <div class="container">
+      <figure>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero autem tempore ipsum fugit architecto temporibus
+        quasi quod. Minus sint quis reprehenderit blanditiis voluptatem illo et, at atque officia dolores enim,
+        quibusdam animi a saepe non! Nihil, incidunt. Repellendus iusto rerum neque dignissimos incidunt non,
+        voluptates, beatae enim autem hic, debitis quisquam. Cupiditate eveniet, non vel vitae perferendis amet, aperiam
+        ratione autem neque aspernatur quidem natus ullam, error veritatis! Unde nemo natus ea quidem consectetur
+        pariatur nisi vero cumque dolore harum atque tempore quam voluptatum, labore necessitatibus consequatur quod ut
+        laudantium cupiditate! Quod quia, incidunt odit dignissimos, dolorum corrupti iure id rem eligendi est neque
+        minima qui consequatur, sunt numquam maxime quibusdam aut iste. Culpa tenetur aperiam sequi, dolorem, suscipit
+        impedit aut unde rem modi, doloremque illo veniam quibusdam. Excepturi quia ratione ipsum! Praesentium hic
+        perferendis nam quae rerum quo, in quibusdam quasi explicabo. Ea, quam totam ipsum dolorum minima quia magni
+        impedit. Reiciendis nemo accusantium iste nam, consequuntur illo eos alias cum ex aspernatur error soluta
+        tenetur vel deleniti incidunt odio blanditiis iusto magni accusamus quod totam sequi quis temporibus. Eum cumque
+        molestiae labore numquam praesentium? Rerum nam eligendi, consequatur at est dolor nemo cumque rem commodi,
+        consectetur nihil maxime.
+      </figure>
+      <figure>
+      </figure>
+    </div>
+  </section>
+  <footer class="sticky">
+    footer
+  </footer>
+
+
+</body>
+
+</html>

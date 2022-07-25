@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index_css/reset.css">
+  <link rel="stylesheet" href="./css/index_css/index.css">
+  <link rel="stylesheet" href="./css/index_css/display.css">
+  <link rel="stylesheet" href="./css/index_css/position.css">
+  <link rel="stylesheet" href="./css/index_css/responsive.css">
+  <link rel="stylesheet" href="./css/index_css/slick.css">
+  <script src = "./js/index_js/index.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1 class = "header_title">Green Computer Academy</h1>
+  </header>
+
+  <nav>
+    <div class="nav_title_box">
+      <h2 class = "nav_title">display</h2>
+      <button type = "button" class = "d_under_show">
+        <i class = "xi-caret-down"></i>
+      </button>
+    </div>
+    <div class = "d_under_bar">
+      <ol class = "d_nav_box">
+        <li class = "nav_list">
+          <a href = "./doc/box/box01.html" target = "_blank">
+            <h3 class = "link_title">BOX-01</h3>
+          </a>
+          <p>태그의 일반적인 성질에 대해서 배운다.</p>
+          <em>2022.05.17</em>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/box/box02.html" target = "_blank">
+            <h3 class = "link_title">BOX-02</h3>
+          </a>
+          <p>BOX의 개념과 padding, margin에 대해 배운다.</p>
+          <em>2022.05.17</em>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/box/box03.html" target = "_blank">
+            <h3 class = "link_title">BOX-03</h3>
+          </a>
+          <p>BOX의 내부 요소들을 가로로 정렬해본다.</p>
+          <em>2022.05.17</em>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/box/box04.html" target = "_blank">
+            <h3 class = "link_title">BOX-04</h3>
+          </a>
+          <p>레이아웃의 기초 - BOX의 위치 변경 / display flex를 이한 BOX의 배열 </p>
+          <ol class = "sub_ol display_ol">
+            <li>flex의 justify-content를 활용하여 요소들을 정방향, 역방향으로 정렬하기</li>
+            <li>flex의 justify-content를 활용하여 요소들 사이의 공간을 넓혀주기</li>
+          </ol>
+          <em>2022.05.18</em>
+        </li>
+      </ol>
+    </div>
+
+    <div class="nav_title_box">
+      <h2 class = "nav_title">position</h2>
+      <button type = "button" class = "p_under_show">
+        <i class = "xi-caret-down"></i>
+      </button>
+    </div>
+    <div class = "p_under_bar">
+      <ol class = "p_nav_box">
+        <li class = "nav_list">
+          <a href = "./doc/position/position01.html" target = "_blank">
+            <h3 class = "link_title">position의 기초</h3>
+          </a>
+          <p>포지션의 기본에 대해 공부하였다.</p>
+          <ol class = "sub_ol position_ol_1">
+            <li>static: 고정값</li>
+            <li>relative: 기준점</li>
+            <li>absolute: 절대좌표</li>
+          </ol>
+          <em>2022.05.19</em>
+          <strong>
+            position 외에도 transition, transform에 대해 배운 것도 굉장히 유용했다. 
+          </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position02.html" target = "_blank">
+            <h3 class = "link_title">position의 기초 - 실습</h3>
+          </a>
+            <p>포지션의 기본을 공부한 것을 바탕으로 움직이는 메뉴 버튼을 만들어보았다.</p>
+            <em>2022.05.19</em>
+            <strong>
+              아직 배우지는 않았지만 간단한 javascript문을 사용하여 html과 js를 어떻게 연결하는지, js로 css를 컨트롤하는 방법을 배웠다.
+            </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position03.html" target = "_blank">
+            <h3 class = "link_title">position 응용 / 의사 클래스 / 가상 요소 / 웹폰트 사용</h3>
+          </a>
+            <p>CSS에서 활용할 수 있는 의사 클래스 중 하나인 hover와 가상 요소, 그리고 웹 폰트 사용에 대해 배웠다.</p>
+            <ol class = "sub_ol position_ol_1">
+              <li>:hover - 요소에 마우스를 가져다대었을 때</li>
+              <li>::after - 웹페이지에서 의미가 없는 도형따위를 작성할 때 CSS로 작성하는 방법</li>
+              <li>XEICON - 네이버에서 제공하는 무료 아이콘. </li>
+            </ol>
+            <em>2022.05.19</em>
+            <strong>
+              의사 클래스를 활용하여 css로도 제한적으로나마 동적인 화면을 구성할 수 있음을 알았다. 또한 웹폰트 사용을 통해 웹을 더욱 다채롭게 구성할 수 있는 방법을 알았다. 의미있는 강의였다.
+            </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position04.html" target = "_blank">
+            <h3 class = "link_title">position 응용 + jquery + transition</h3>
+          </a>
+            <p>position 속성을 사용하여 요소의 배치를 진행하고, jquery와 transition을 사용하여 개별 이미지 요소를 유연하게 슬라이딩시켜보았다.</p>
+            <em>2022.05.25</em>
+            <strong>
+              부분적으로나마 jquery를 사용해보았다. jquery 사용을 통해 css 컨트롤을 자유롭게 할 수 있음을 알게되었다. jquery를 통해 굉장히 동적인 웹 페이지를 만들 수 있음을 알게 되었다. 프론트엔드라는 분야를 더 깊이 공부하고 싶어졌다.
+            </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position05.html" target = "_blank">
+            <h3 class = "link_title">QUIZ_1</h3>
+          </a>
+            <p>웃는 모습 - 우는 모습으로 바꾸기</p>
+            <em>2022.05.25</em>
+            <strong>
+              딱히 제한시간은 없었는데 제한 시간이 있다 생각하고 만들었다. 갑자기 주어진 미션이어서 코딩테스트를 하는 느낌이었다. 빨리빨리 하느라 결과물이 개인적으로 마음에는 안들었지만 제출했다는데 의의를 두기로 한다.
+            </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position05_1.html" target = "_blank">
+            <h3 class = "link_title">QUIZ_1_해설</h3>
+          </a>
+            <p>웃는 모습 - 우는 모습으로 바꾸기</p>
+            <em>2022.05.26</em>
+            <strong>
+            </strong>
+        </li>
+        <li class = "nav_list">
+          <a href = "./doc/position/position06.html" target = "_blank">
+            <h3 class = "link_title">position 응용 + animation</h3>
+          </a>
+            <p>상단/우측에서 등장하는 배너 만들기 + 애니메이션 사용하기</p>
+            <em>2022.05.26</em>
+            <strong>
+              position과 transition, 그리고 animation을 활용하여 도형을 움직여보았다.
+            </strong>
+        </li>
+      </ol>
+    </div>
+
+    <div class="nav_title_box">
+      <h2 class = "nav_title">Responsive_Web</h2>
+      <button type = "button" class = "r_under_show">
+        <i class = "xi-caret-down"></i>
+      </button>
+    </div>
+    <div class = "r_under_bar">
+      <ol class = "r_nav_box">
+        <li class = "nav_list">
+          <a href = "./doc/responsive/responsive_web01.html" target = "_blank">
+            <h3 class = "link_title">Responsive_Web</h3>
+          </a>
+          <p>CSS medai query 사용</p>
+          <em>2022.05.30</em>
+          <strong>
+            CSS로 반응형 웹 페이지를 구성하는 법을 배웠다. 여태껏 배웠던 것과 반응형 웹 페이지를 혼합하여 Viewport 크기에 따라 새롭게 생성되는 메뉴를 구성해보았다.
+          </strong>
+        </li>
+      </ol>
+    </div>
+
+    <div class="nav_title_box">
+      <h2 class = "nav_title">Slick Slide</h2>
+      <button type = "button" class = "s_under_show">
+        <i class = "xi-caret-down"></i>
+      </button>
+    </div>
+    <div class = "s_under_bar">
+      <ol class = "s_nav_box">
+        <li class = "nav_list">
+          <a href = "./doc/slick/slick01.html" target = "_blank">
+            <h3 class = "link_title">Slick_01</h3>
+          </a>
+          <p>JS 라이브러리 Slick을 활용하여 슬라이드 섹션 구현하기</p>
+          <em>2022.05.31</em>
+          <strong>
+            Slick을 통해 세련된 디자인의 슬라이드 섹션을 만들어 보았다. js를 아직 제대로 배우지않아 여전히 헷갈리는 부분이 있으나, 차후 js를 제대로 배우게 된다면 조금 더 쉽게 적응할 수 있을 것 같다.
+          </strong>
+        </li>
+      </ol>
+    </div>
+  </nav>
+</body>
+</html>

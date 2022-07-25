@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/position/position05.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class = "container">
+    <li class = "part eye_1">
+      <span></span>
+      <span></span>
+    </li>
+    <li class = "part eye_2">
+      <span></span>
+      <span></span>
+    </li>
+    <li class = "part mouth">
+      <span></span>
+      <span></span>
+    </li>
+  </ul>
+
+  <script>
+    document.querySelector('.container').addEventListener('click', function() {
+      document.querySelector('.part.eye_1 span:first-child').classList.toggle('on');
+      document.querySelector('.part.eye_1 span:last-child').classList.toggle('on');
+      document.querySelector('.part.eye_2 span:first-child').classList.toggle('on');
+      document.querySelector('.part.eye_2 span:last-child').classList.toggle('on');
+      document.querySelector('.part.mouth span:first-child').classList.toggle('on');
+      document.querySelector('.part.mouth span:last-child').classList.toggle('on');
+    });
+  </script>
+</body>
+</html>

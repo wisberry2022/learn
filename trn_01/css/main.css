@@ -1,0 +1,33 @@
+.content {
+  padding: 100px 0;
+}
+
+.content .container {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.content .container figure {
+  flex: 1;
+}
+
+.content img {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.content strong {
+  display: block;
+  margin: 0 0 10px 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
