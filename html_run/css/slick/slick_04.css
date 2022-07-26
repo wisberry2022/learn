@@ -1,0 +1,15 @@
+.tabCon {
+  position: relative;
+}
+
+.tabCon>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+}
+
+.tabCon>div.on {
+  visibility: visible;
+}

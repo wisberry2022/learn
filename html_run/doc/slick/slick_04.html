@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/slick/slick.css">
+  <link rel="stylesheet" href="../../css/slick/slick_04.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section>
+    <ul class="tab_menu">
+      <li>menu01</li>
+      <li>menu02</li>
+    </ul>
+    <div class="tabCon">
+      <div class="on">
+        <div class="left">
+          <figure>Mock_Slide 01</figure>
+          <figure>Mock_Slide 02</figure>
+          <figure>Mock_Slide 03</figure>
+          <figure>Mock_Slide 04</figure>
+        </div>
+      </div>
+      <div>
+        <div class="right">
+          <figure>Mock_Slide 05</figure>
+          <figure>Mock_Slide 06</figure>
+          <figure>Mock_Slide 07</figure>
+          <figure>Mock_Slide 08</figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../js/jquery-1.12.4.min.js"></script>
+  <script src="../../js/slick.min.js"></script>
+  <script>
+    $(function () {
+      $('.tab_menu li').on('click', function () {
+        var idx = $(this).index();
+        $('.tabCon div').eq(idx).addClass('on').siblings().removeClass('on');
+      })
+    })
+
+    $('.left').slick();
+    $('.right').slick();
+  </script>
+
+</body>
+
+</html>
