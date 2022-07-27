@@ -1,0 +1,143 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 120rem;
+}
+
+.TopBanner {
+  padding: 3rem 0 3rem 0;
+  background: #f8f8f8;
+}
+
+.TopBanner .container {
+  position: relative;
+  display: block;
+}
+
+.TopBanner .container h2 {
+  text-transform: uppercase;
+}
+
+.TopBanner h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.TopBanner p {
+  font-size: 1.3rem;
+}
+
+.TopBanner a {
+  display: inline-block;
+  margin: 0 0 0 2rem;
+  border: 1px solid #333;
+  padding: 2px 2rem 5px 2rem;
+  transform: translateY(-0.2rem);
+}
+
+.TopBanner i {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .TopBanner {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    padding: 3rem 0 3rem 0;
+    background: #f8f8f8;
+  }
+
+  .TopBanner .container {
+    position: relative;
+    display: block;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .TopBanner h2 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .TopBanner p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .TopBanner a {
+    display: block;
+    margin: 2rem 0 0 0;
+    border: 1px solid #333;
+    padding: 2px 2rem 5px 2rem;
+    width: 8rem;
+    text-align: center;
+    transform: translateY(0);
+  }
+
+  .TopBanner i {
+    position: absolute;
+    top: -25%;
+    right: 0;
+    padding: 5px;
+    background: #333;
+    color: #fff;
+  }
+}
+
+.pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background-color: #f00;
+}
+
+.pop button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.pop:nth-of-type(2) {
+  top: 10%;
+  left: 10%;
+}
+
+.pop:nth-of-type(3) {
+  top: 30%;
+  left: 30%;
+}
+
+.pop:nth-of-type(4) {
+  top: 50%;
+  left: 50%;
+}
+
+.pop:nth-of-type(5) {
+  top: 70%;
+  left: 70%;
+}
