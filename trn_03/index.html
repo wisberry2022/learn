@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="./assets/plugin/css/common.css">
   <link rel="stylesheet" href="./assets/plugin/css/slick.css">
   <link rel="stylesheet" href="./assets/plugin/css/jquery.mb.YTPlayer.min.css">
-  <link rel="stylesheet" href="./css/main.css?ver=1.0">
+  <link rel="stylesheet" href="./css/main.css">
   <script src="./assets/plugin/js/jquery-1.12.4.min.js"></script>
   <script src="./assets/plugin/js/slick.min.js"></script>
   <script src="./assets/plugin/js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="./js/main.js?ver=1.0"></script>
+  <script src="./js/main.js"></script>
   <title>Responsive Web Practice 01</title>
   <meta name="description" content="rem사용, jquery사용" />
 </head>
@@ -28,23 +28,33 @@
         <i class="xi-close"></i>
       </div>
     </div>
+
+    <header class="header">
+      <div class="container">
+        <h1>
+          <a href="/">
+            <img src="./assets/img/grafflogo.png" alt="graff">
+          </a>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#!">하이주얼리</a></li>
+            <li><a href="#!">주얼리 컬렉션</a></li>
+            <li><a href="#!">컬렉션 &amp; 브라이덜</a></li>
+            <li><a href="#!">웨딩주얼리</a></li>
+            <li><a href="#!">특별한 솔리테어</a></li>
+          </ul>
+        </nav>
+        <form id="searchForm" action="javascript:search()" method="GET">
+          <input type="text" name="search" placeholder="검색어를 입력하세요." required />
+          <button>
+            <i class="xi-search"></i>
+          </button>
+        </form>
+      </div>
+    </header>
   </div>
 
-  <div class="pop pop01">
-    <button>close</button>
-  </div>
-  <div class="pop pop02">
-    <button>close</button>
-  </div>
-  <div class="pop pop03">
-    <button>close</button>
-  </div>
-  <div class="pop pop04">
-    <button>close</button>
-  </div>
-  <div class="pop pop05">
-    <button>close</button>
-  </div>
 </body>
 
 </html>

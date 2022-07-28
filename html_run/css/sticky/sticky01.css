@@ -1,0 +1,26 @@
+.sc {
+  height: 100vh;
+}
+
+.sc01 {
+  position: sticky;
+  top: 0;
+  background: #f00;
+}
+
+.sc02 {
+  /* position: relative; */
+  background: #ff0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.sc03 {
+  background: #369;
+}
