@@ -118,3 +118,89 @@ body {
   border: none;
   background: transparent;
 }
+
+.main_visual {
+  position: relative;
+}
+
+.main_visual .main_slider figure {
+  height: 60rem;
+}
+
+.main_slider .itm01 {
+  background: url('../assets/img/mainvisual01.jpg') no-repeat center center/cover;
+}
+
+.main_slider .itm02 {
+  background: url('../assets/img/mainvisual02.jpg') no-repeat center center/cover;
+}
+
+.main_slider .itm03 {
+  background: url('../assets/img/mainvisual03.jpg') no-repeat center center/cover;
+}
+
+.main_slider .itm04 {
+  background: url('../assets/img/mainvisual01.jpg') no-repeat center center/cover;
+}
+
+.main_visual .slogan {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.main_visual .slogan h2 {
+  margin: 0 0 1.2rem 0;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 0 0 3px #000;
+  text-indent: -2px;
+}
+
+.main_visual .slogan p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px #000;
+}
+
+.main_visual .slick-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  /* display: flex; */
+  transform: translateX(-50%);
+}
+
+.main_visual .slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.5rem;
+  border-radius: 0.2rem;
+  width: 4rem;
+  height: 0.4rem;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.main_visual .slick-dots li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f00;
+
+}
+
+.main_visual .slick-dots li.slick-active::after {
+  width: 100%;
+  transition: 0.5s;
+
+}
+
+.main_slider .slick-dots button {
+  display: none;
+}
