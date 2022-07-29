@@ -1,0 +1,30 @@
+#slider {
+  position: relative;
+  height: 100vh;
+}
+
+.header_player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.dots {
+  display: inline-block;
+  /* outline: 1px solid #fff; */
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.dots li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  cursor: pointer;
+}
