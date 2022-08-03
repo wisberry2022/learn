@@ -1,0 +1,13 @@
+:root {
+  --mainColor: #0d6efd;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.blue {
+  color: var(--mainColor);
+}
