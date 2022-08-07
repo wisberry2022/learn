@@ -1,0 +1,89 @@
+* {
+  outline: 1px solid #000;
+}
+
+/* grid container에 display: grid를 지정 */
+.container {
+  display: grid;
+  /* grid-item들의 column과 row의 width/height를 지정할 수 있다. 이 때 grid-item들은 설정해준 값들의 개수만큼 일렬로 정렬된다 */
+  /* fr 단위를 사용하여 grid item의 너비를 비율로 지정할 수 있다 */
+  /* repeat함수를 통해 반복되는 값을 자동으로 처리할 수 있다 */
+  /* minmax(a,b) 함수는 grid item에 컨텐츠가 없어도 최소 a만큼의 크기는 가지게 하고, 최대 크기는 b까지 가지게한다는 의미다 */
+  grid-template-columns: repeat(3, minmax(100px, auto));
+  /* grid-template-rows: repeat(3, minmax(50px, 150px)); */
+  
+  /* grid-auto-rows: grid-item의 row 개수가 정해져있지 않을때 사용할 수 있는 속성 */
+  /* grid-template-rows/column의 통제를 받지 않는 column/row들의 배치를 결정한다 */
+  /* grid-auto-rows: 100px; */
+  /* grid cell 사이의 column/row gap을 지정할 수 있다 */
+  column-gap: 1px;
+  row-gap: 1px;
+  /* grid-gap / gap: column/row gap 일괄적용 */
+  
+  grid-gap: 5px;
+  margin: 0 auto;
+  width: 1200px;
+  height: 600px;
+}
+
+/* grid-template-column를 지정해주지 않아도 영역 설정을 통해 column을 지정해줄 수 있다 */
+/* grid-item 영역 설정 */
+.container .item01 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/* grid-item 영역 설정(축약형) */
+/* .container .item04 {
+  grid-column: 1/4;
+  grid-row: 3/6;
+} */
+
+/* grid-item 영역 설정(span 사용) */
+.container .item04 {
+  /* grid-line 1번에서 3개의 grid-cell을 차지하겠다는 의미 */
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 3;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 5px 0;
+  width: 1200px;
+}
+
+.test_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-columns: minmax(100px auto);
+  grid-gap: 3px;
+}
+
+.test_box .box01 {
+  height: 200px; 
+  background: url('../../assets/image/love_is_dead.jpg') no-repeat center center/cover;
+}
+
+.test_box .box02 {
+  grid-column: 2/4;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+/* 본래 위치에서 row 영역만 넓히고 싶다면 grid-column-start를 맞춰주어야 한다 */
+.test_box .box07 {
+  grid-column-start: 4;
+  grid-row: 2/4;
+  overflow: hidden;
+}
+
+.test_box .box08 {
+  grid-column: 1/3;
+}
+
+
+
