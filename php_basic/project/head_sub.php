@@ -1,3 +1,5 @@
+<? include "asset.php" ?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -8,28 +10,33 @@
   <link rel="stylesheet" href="./assets/plugin/css/common.css">
   <link rel="stylesheet" href="./assets/plugin/css/slick.css">
   <link rel="stylesheet" href="./css/main.css">
-  <title>현대엘리베이터 - 실습 01</title>
+  <title><?= $title ?></title>
 </head>
 
 <body>
   <div class="Wrap">
     <header class="Header">
-      <div class="top"></div>
-      <div class="bottom">
-        <div class="container"></div>
-        <h1>
-          <a href="/project">
-            <img src="./assets/image/logo01.png" alt="">
-          </a>
-        </h1>
-        <nav>
+      <div class="top">
+        <div class="container">
+          <strong>
+            <?= $c_slogan ?>
+          </strong>
           <ul>
-            <li><a href="sub01.php">기업정보</a></li>
-            <li><a href="sub02.php">솔루션</a></li>
-            <li><a href="sub03.php">서비스</a></li>
-            <li><a href="sub04.php">혁신기술</a></li>
-            <li><a href="board">고객지원</a></li>
+            <li><a href="#!">news / notice</a></li>
+            <li><a href="#!">adm</a></li>
           </ul>
-        </nav>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <h1>
+            <a href="#!">
+              <img src="./assets/image/logo02.png" alt="<?= $title ?>">
+            </a>
+          </h1>
+          <nav class="Gnb">
+            <? include "nav.php" ?>
+          </nav>
+        </div>
       </div>
     </header>
