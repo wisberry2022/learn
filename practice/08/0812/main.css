@@ -1,0 +1,12 @@
+.box {
+  position: relative;
+  border: 1px solid #000;
+  width: 550px;
+  height: 300px;
+  /* overflow: hidden; */
+}
+
+.box figure {
+  position: absolute;
+  /* top: 30px; */
+}
