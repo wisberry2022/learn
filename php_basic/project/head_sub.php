@@ -7,9 +7,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/plugin/css/common.css">
-  <link rel="stylesheet" href="./assets/plugin/css/slick.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./assets/plugin/css/common.css?ver=1.0">
+  <link rel="stylesheet" href="./assets/plugin/css/slick.css?ver=1.0">
+  <link rel="stylesheet" href="./css/main.css?ver=1.0">
   <title><?= $title ?></title>
 </head>
 
