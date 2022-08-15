@@ -1,0 +1,57 @@
+/* * {
+  outline: 1px solid #333;
+} */
+
+header {
+  border-bottom: 1px solid #333
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 1200px;
+}
+
+header .gnb {
+  display: flex;
+}
+
+header .gnb li a {
+  display: block;
+  padding: 10px 20px;
+}
+
+header .container .slide_btn {
+  position: relative;
+  border-radius: 100px;
+  border: none;
+  padding: 5.4px 10px;
+  width: 90px;
+  height: auto;
+  background: #4169E1;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+header .container .slide_btn.on {
+  background: #dddddd;
+}
+
+.slide_btn .circle {
+  position: absolute;
+  top: 5.4px;
+  left: 10px;
+  display: block;
+  border: none;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.slide_btn.on .circle {
+  left: calc(100% - 33px);
+}
