@@ -1,0 +1,48 @@
+.Wrap {}
+
+#Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  min-width: 1900px;
+  line-height: 77px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.5s;
+}
+
+#Header.on {
+  background-color: #000;
+}
+
+.Gnb ul {
+  display: flex;
+  gap: 30px;
+}
+
+.tel {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.tel i {
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 13px;
+  transform: translateY(-5px);
+}
+
+#MainVisual {
+  height: 200vh;
+  background: url('../assets/image/bg_intro01.jpg') repeat-x;
+}
+
+.screvent {
+  height: 100vh;
+}
