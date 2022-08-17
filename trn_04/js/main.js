@@ -1,26 +1,39 @@
-window.addEventListener('DOMContentLoaded', function () {
-
-  const SCE_ELE = document.querySelectorAll('.screvent');
-
-
-  window.addEventListener('scroll', function () {
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', () => {
     let sct = window.scrollY;
+    console.log(sct);
     sct > 0
       ? document.querySelector('#Header').classList.add('on')
-      : document.querySelector('#Header').classList.remove('on');
+      : document.querySelector('#Header').classList.remove('on')
+  });
 
-  })
+  const MainSlider = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
 
-  window.addEventListener('scroll', function () {
+    }
+  });
+
+  const SCE_ELE = document.querySelectorAll('.active-event');
+
+  window.addEventListener('scroll', () => {
     let sct = window.scrollY;
-    SCE_ELE.forEach(elm => {
-      if (sct > elm.offsetTop) {
-        elm.classList.add('on');
-      } else {
-        elm.classList.remove('on');
-      }
+    SCE_ELE.forEach(el => {
+      sct > el.offsetTop - 300
+        ? el.classList.add('on')
+        : el.classList.remove('on')
     })
   });
 
 
-});
+
+
+
+
+
+})
