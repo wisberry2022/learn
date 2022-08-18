@@ -6,6 +6,8 @@ window.addEventListener('DOMContentLoaded', function () {
     acc: '',
     window_acc: '',
     result: 0,
+    operand_flag: false,
+    temp: '',
     expression: new Array(),
     __show: function () {
       console.log(this.name, this.acc, this.result, this.expression);
@@ -19,44 +21,88 @@ window.addEventListener('DOMContentLoaded', function () {
       this.window_acc += value;
     },
 
+    __windowNumDelete: function() {
+      let w_result = this.window_acc.split('');
+      let w_temp = w_result.splice(-1, 1);
+      this.window_acc = w_result.join('');
+    },
+
+    __accDelete: function() {
+      let a_result = this.acc.split('');
+      let a_temp = a_result.splice(-1, 1);
+      this.acc = a_result.join('');
+    },
+
     __calculate: function () {
       this.expression.forEach(function (elm, idx, arr) {
-        if (typeof (elm) == 'number') {
+        if (typeof (parseInt(elm)) == 'number') {
           if (!(idx)) {
             console.log(this.result);
             this.result += elm;
           } else {
             if (arr[idx - 1] == '+') {
-              this.result += elm;
+              this.result += parseInt(elm);
             } else if (arr[idx - 1] == '-') {
-              this.result -= elm;
+              this.result -= parseInt(elm);
             } else if (arr[idx - 1] == 'X') {
-              this.result *= elm;
+              this.result *= parseInt(elm);
             } else if (arr[idx - 1] == '/') {
-              this.result /= elm;
+              this.result /= parseInt(elm);
             } else if (arr[idx - 1] == '%') {
-              this.result %= elm;
+              this.result %= parseInt(elm);
             }
           }
         }
       }, this)
     },
 
+    __expressionAdd: function(value) {
+      if (!(this.operand_flag)) {
+        this.expression.length ? 
+        this.expression[this.expression.length-1] += value :
+        this.expression.push(value);
+      }else {
+        if (value == '=') {
+          this.expression.push(value);
+        }else {
+          this.expression.push(value);
+          this.expression.push('');
+        }
+        
+      }
+      console.log(this.expression);
+    },
+
+    __expressionDelete: function() {
+      // this.expression.forEach(function(elm,idx,arr) {
+      //   if (elm.toString().length > 1) {
+      //     let temp = elm.toString().split('');
+      //     let temp2 = [...temp];
+      //     console.log(temp2);
+      //   }
+      // }, this);
+      let lastAtom = this.expression[this.expression.length-1].toString();
+      console.log(lastAtom);
+
+      // this.expression.pop();
+      // console.log(this.expression);
+    },
+
     numClick: function (value) {
-      this.acc += value;
-      this.__show();
+      this.operand_flag = false;
+      this.__expressionAdd(value);
     },
 
     operandClick: function (value) {
-      this.expression.push(parseInt(this.acc));
-      this.expression.push(value);
+      this.operand_flag = true;
+      this.__expressionAdd(value);
       this.acc = '';
     },
 
-    resultClick: function () {
-      this.expression.push(parseInt(this.acc));
+    resultClick: function (showObj) {
       this.__calculate();
       this.__show();
+      showObj.innerText = this.result;
     },
 
     clickShow: function (value, showObj) {
@@ -64,17 +110,13 @@ window.addEventListener('DOMContentLoaded', function () {
       showObj.innerText = this.window_acc;
     },
 
-
     deleteClick: function (delete_obj) {
       let result = delete_obj.innerText.split('');
       let temp = result.splice(-1, 1);
       delete_obj.innerText = result.join('');
-      let w_result = this.window_acc.split('');
-      let w_temp = w_result.splice(-1, 1);
-      this.window_acc = w_result.join('');
-      let a_result = this.acc.split('');
-      let a_temp = a_result.splice(-1, 1);
-      this.acc = a_result.join('');
+      this.__windowNumDelete();
+      this.__accDelete();
+      this.__expressionDelete();
     },
 
     clearClick: function (...clearObj) {
@@ -82,6 +124,7 @@ window.addEventListener('DOMContentLoaded', function () {
       this.window_acc = '';
       this.acc = '';
       this.expression = [];
+      this.result = 0;
     },
   };
 
@@ -102,11 +145,10 @@ window.addEventListener('DOMContentLoaded', function () {
       }// 연산자 패드를 눌렀을 때
       else if (currentClick.classList.contains('operand')) {
         calc.clickShow(currentClick.innerText, CURRENT);
+        calc.operandClick(currentClick.innerText);
         if (currentClick.innerText == '=') {
-          calc.resultClick();
-        } else {
-          calc.operandClick(currentClick.innerText);
-        }
+          calc.resultClick(RESULT_SHOW);
+        } 
 
       } else // func 패드를 눌렀을 때 {
         // DELETE 패드를 눌렀을 때
