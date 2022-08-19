@@ -21,13 +21,13 @@ window.addEventListener('DOMContentLoaded', function () {
       this.window_acc += value;
     },
 
-    __windowNumDelete: function() {
+    __windowNumDelete: function () {
       let w_result = this.window_acc.split('');
       let w_temp = w_result.splice(-1, 1);
       this.window_acc = w_result.join('');
     },
 
-    __accDelete: function() {
+    __accDelete: function () {
       let a_result = this.acc.split('');
       let a_temp = a_result.splice(-1, 1);
       this.acc = a_result.join('');
@@ -56,34 +56,36 @@ window.addEventListener('DOMContentLoaded', function () {
       }, this)
     },
 
-    __expressionAdd: function(value) {
+    __expressionAdd: function (value) {
       if (!(this.operand_flag)) {
-        this.expression.length ? 
-        this.expression[this.expression.length-1] += value :
-        this.expression.push(value);
-      }else {
+        this.expression.length ?
+          this.expression[this.expression.length - 1] += value :
+          this.expression.push(value);
+      } else {
         if (value == '=') {
           this.expression.push(value);
-        }else {
+        } else {
           this.expression.push(value);
           this.expression.push('');
         }
-        
+
       }
       console.log(this.expression);
     },
 
-    __expressionDelete: function() {
-      // this.expression.forEach(function(elm,idx,arr) {
-      //   if (elm.toString().length > 1) {
-      //     let temp = elm.toString().split('');
-      //     let temp2 = [...temp];
-      //     console.log(temp2);
-      //   }
-      // }, this);
-      let lastAtom = this.expression[this.expression.length-1].toString();
-      console.log(lastAtom);
-
+    __expressionDelete: function () {
+      let lastAtom = this.expression[this.expression.length - 1].toString();
+      if (lastAtom.length > 1) {
+        let temp = this.expression[this.expression.length - 1].split('');
+        temp.pop();
+        this.expression
+      } else {
+        this.expression.splice(-1, 1);
+      }
+      // lastAtom.length > 1 ?
+      //   console.log(this.expression[this.expression.length - 1].split('').splice(-1, 1)) :
+      //   this.expression.splice(-1, 1);
+      // console.log(this.expression);
       // this.expression.pop();
       // console.log(this.expression);
     },
@@ -148,7 +150,7 @@ window.addEventListener('DOMContentLoaded', function () {
         calc.operandClick(currentClick.innerText);
         if (currentClick.innerText == '=') {
           calc.resultClick(RESULT_SHOW);
-        } 
+        }
 
       } else // func 패드를 눌렀을 때 {
         // DELETE 패드를 눌렀을 때
