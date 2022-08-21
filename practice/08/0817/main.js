@@ -78,16 +78,10 @@ window.addEventListener('DOMContentLoaded', function () {
       if (lastAtom.length > 1) {
         let temp = this.expression[this.expression.length - 1].split('');
         temp.pop();
-        this.expression
+        this.expression.splice(-1, 1, temp.join(''));        
       } else {
         this.expression.splice(-1, 1);
       }
-      // lastAtom.length > 1 ?
-      //   console.log(this.expression[this.expression.length - 1].split('').splice(-1, 1)) :
-      //   this.expression.splice(-1, 1);
-      // console.log(this.expression);
-      // this.expression.pop();
-      // console.log(this.expression);
     },
 
     numClick: function (value) {
@@ -97,8 +91,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
     operandClick: function (value) {
       this.operand_flag = true;
-      this.__expressionAdd(value);
-      this.acc = '';
+      if (this.operand_flag) {
+        this.__expressionAdd(value);
+        this.acc = '';
+      }else {
+
+      }
     },
 
     resultClick: function (showObj) {
@@ -119,6 +117,7 @@ window.addEventListener('DOMContentLoaded', function () {
       this.__windowNumDelete();
       this.__accDelete();
       this.__expressionDelete();
+      this.result = 0;
     },
 
     clearClick: function (...clearObj) {
