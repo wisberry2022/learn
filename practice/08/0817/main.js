@@ -1,44 +1,33 @@
 window.addEventListener('DOMContentLoaded', function () {
 
   // 계산기 객체
-  const CALC_OBJ = {
-    name: 'calc',
-    acc: '',
-    window_acc: '',
-    result: 0,
-    operand_flag: false,
-    temp: '',
-    expression: new Array(),
-    __show: function () {
-      console.log(this.name, this.acc, this.result, this.expression);
-    },
+  function CALC_OBJ() {
+    this.name = 'calc';
+    this.window_acc = '';
+    this.result = 0;
+    this.operand_flag = false;
+    this.expression = new Array();
 
-    __numClick: function (value) {
-      this.acc += value;
-    },
+    this.__show = function () {
+      console.log(this.name, this.result, this.expression);
+    };
 
-    __windowNumClick: function (value) {
+    this.__windowNumClick = function (value) {
       this.window_acc += value;
-    },
+    };
 
-    __windowNumDelete: function () {
+    this.__windowNumDelete = function () {
       let w_result = this.window_acc.split('');
       let w_temp = w_result.splice(-1, 1);
       this.window_acc = w_result.join('');
-    },
+    };
 
-    __accDelete: function () {
-      let a_result = this.acc.split('');
-      let a_temp = a_result.splice(-1, 1);
-      this.acc = a_result.join('');
-    },
-
-    __calculate: function () {
+    this.__calculate = function () {
       this.expression.forEach(function (elm, idx, arr) {
         if (typeof (parseInt(elm)) == 'number') {
           if (!(idx)) {
             console.log(this.result);
-            this.result += elm;
+            this.result += parseInt(elm);
           } else {
             if (arr[idx - 1] == '+') {
               this.result += parseInt(elm);
@@ -54,9 +43,9 @@ window.addEventListener('DOMContentLoaded', function () {
           }
         }
       }, this)
-    },
+    };
 
-    __expressionAdd: function (value) {
+    this.__expressionAdd = function (value) {
       if (!(this.operand_flag)) {
         this.expression.length ?
           this.expression[this.expression.length - 1] += value :
@@ -71,69 +60,67 @@ window.addEventListener('DOMContentLoaded', function () {
 
       }
       console.log(this.expression);
-    },
+    };
 
-    __expressionDelete: function () {
-      let lastAtom = this.expression[this.expression.length - 1].toString();
+    this.__expressionDelete = function () {
+      let lastAtom = this.expression[this.expression.length - 1];
       if (lastAtom.length > 1) {
-        let temp = this.expression[this.expression.length - 1].split('');
+        // let temp = this.expression[this.expression.length - 1].split('');
+        // temp.pop();
+        let temp = lastAtom.split('');
         temp.pop();
-        this.expression.splice(-1, 1, temp.join(''));        
+        this.expression.splice(-1, 1, temp.join(''));
       } else {
         this.expression.splice(-1, 1);
       }
-    },
+      console.log(this.expression);
+    };
 
-    numClick: function (value) {
+    this.numClick = function (value) {
       this.operand_flag = false;
       this.__expressionAdd(value);
-    },
+    };
 
-    operandClick: function (value) {
-      this.operand_flag = true;
-      if (this.operand_flag) {
+    this.operandClick = function (value) {
+      if (!(this.operand_flag)) {
+        this.operand_flag = true
         this.__expressionAdd(value);
-        this.acc = '';
-      }else {
-
       }
-    },
+    };
 
-    resultClick: function (showObj) {
+    this.resultClick = function (showObj) {
       this.__calculate();
       this.__show();
       showObj.innerText = this.result;
-    },
+    };
 
-    clickShow: function (value, showObj) {
+    this.clickShow = function (value, showObj) {
       this.__windowNumClick(value);
       showObj.innerText = this.window_acc;
-    },
+    };
 
-    deleteClick: function (delete_obj) {
+    this.deleteClick = function (delete_obj) {
       let result = delete_obj.innerText.split('');
       let temp = result.splice(-1, 1);
       delete_obj.innerText = result.join('');
       this.__windowNumDelete();
-      this.__accDelete();
       this.__expressionDelete();
       this.result = 0;
-    },
+    };
 
-    clearClick: function (...clearObj) {
+    this.clearClick = function (...clearObj) {
       clearObj.forEach(function (elm) { elm.innerText = ''; });
       this.window_acc = '';
-      this.acc = '';
       this.expression = [];
       this.result = 0;
-    },
+    };
   };
 
   const BTN = document.querySelector('.btn_box');
   const RESULT_SHOW = document.querySelector('.input_window .result');
   const CURRENT = document.querySelector('.input_window .current');
 
-  let calc = CALC_OBJ;
+  let calc = new CALC_OBJ();
 
   BTN.addEventListener('click', function (event) {
     const currentClick = event.target;
