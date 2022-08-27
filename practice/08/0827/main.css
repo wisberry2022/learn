@@ -1,0 +1,51 @@
+/* * {
+  outline: 1px solid #000;
+} */
+
+.test {
+  padding: 30px 0;
+}
+
+.test form {
+  margin: 0 auto 25px auto;
+  border-bottom: 1px solid #00f;
+  padding-bottom: 30px;
+  width: 1200px;
+  text-align: center;
+}
+
+.test form label {
+  margin-right: 15px;
+  border: 1px solid #00f;
+  padding: 0 15px;
+  color: #fff;
+  background: #00f;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.test form input {
+  margin-right: 5px;
+  border: 2px solid #00f;
+}
+
+.test form button {
+  border: none;
+  padding: 5px;
+  outline: none;
+  background: transparent;
+  background-color: #00f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.result {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 1200px;
+}
+
+.on {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
