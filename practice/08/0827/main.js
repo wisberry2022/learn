@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  var count = 0;
-
   function createDOM(parentTag, tag, textContents, className) {
     let newTag = document.createElement(tag);
     if (typeof (className) != undefined) {
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const [SEARCH] = document.getElementsByTagName('input');
 
   ADD_BTN.addEventListener('click', function() {
-    count++;
     let RESULT = document.querySelector('.result');
     let elem_value = SEARCH.value;
     createDOM(RESULT, 'div', elem_value, 'test01');
