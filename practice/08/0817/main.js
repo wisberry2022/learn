@@ -65,8 +65,6 @@ window.addEventListener('DOMContentLoaded', function () {
     this.__expressionDelete = function () {
       let lastAtom = this.expression[this.expression.length - 1];
       if (lastAtom.length > 1) {
-        // let temp = this.expression[this.expression.length - 1].split('');
-        // temp.pop();
         let temp = lastAtom.split('');
         temp.pop();
         this.expression.splice(-1, 1, temp.join(''));
